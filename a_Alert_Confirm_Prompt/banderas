@@ -1,0 +1,12 @@
+salida=1;
+
+do{
+  dato=prompt("Introduce un dato");
+    //prompt devuelve un String independiente de lo que tu hayas introducido
+    //Sin meter nada devuelve un String con una cadena vacia
+    //Si damos a cancelar nos devuelve null
+  if(dato){
+  }else{
+  }
+
+}while(salida==1); //Mientras salida sea igual a 1
