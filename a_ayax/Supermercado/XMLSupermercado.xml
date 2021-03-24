@@ -1,0 +1,22 @@
+<supermercados>
+  <supermercado>
+    <id>1</id>
+    <nombre>Lydel</nombre>
+    <direccion>Av. de la Institución Libre de Enseñanza, 23C, 28037 Madrid</direccion>
+    <geolocalizacion>40.43327874991308, -3.6360848741069463</geolocalizacion>
+  </supermercado>
+  
+   <supermercado>
+    <id>2</id>
+    <nombre>ahorramas</nombre>
+    <direccion>Plaza de Vilaflor, s/n, 28017 Madrid</direccion>
+    <geolocalizacion>40.43327874991308, -3.6360848741069463</geolocalizacion>
+  </supermercado>
+  
+   <supermercado>
+    <id>3</id>
+    <nombre>mercadona</nombre>
+    <direccion>C. de Julián Camarillo, 15, 28037 Madrid</direccion>
+    <geolocalizacion>40.43454528922788, -3.63157200905931</geolocalizacion>
+  </supermercado>
+</supermercados>

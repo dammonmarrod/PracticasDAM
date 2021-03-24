@@ -1,0 +1,37 @@
+{"supermercado":[
+{
+"id":1,
+"nombre":"lydel",
+"direccion":"Av. de la Institución Libre de Enseñanza, 23C, 28037 Madrid",
+"geolocalizacion":"40.439243328338364, -3.633533500924182",
+"productos":
+[
+{
+"categoria":"desayuno",
+"producto": [
+{ "nombre": "leche",  "nota": "leche suprema Asturiana",   "perecedero": true,  "precioVta": 3.27 },
+{ "nombre": "galletas",  "nota": "galletas de chocolate",   "perecedero": false,  "precioVta": 3.27 },
+],
+"categoria":"limpieza",
+
+"categoria":"fruta",
+"producto":[
+{ "nombre": "naranja",  "nota": "Un kilo de naranjas",   "perecedero": true,  "precioVta": 3.27 },
+]
+},
+] 
+},
+{
+"id":2,
+"nombre":"ahorramas",
+"direccion":"Plaza de Vilaflor, s/n, 28017 Madrid",
+"geolocalizacion":"40.43327874991308, -3.6360848741069463",
+},
+{
+"id":3,
+"nombre":"mercadona",
+"direccion":"C. de Julián Camarillo, 15, 28037 Madrid",
+"geolocalizacion":"40.43454528922788, -3.631572009059317",
+},
+]
+}
