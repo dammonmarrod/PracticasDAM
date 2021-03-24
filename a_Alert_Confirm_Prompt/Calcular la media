@@ -8,7 +8,7 @@
 
 		var contNumerosIntroducidos=0; //aumenta cada vez que se introduce un número válido
 		var sumaTodosValores=0; //sumará todos los valores válidos.
-		var numerosRecogidos;
+		var numerosRecogidos; //Sino la defino, puedo luego indicar que tipo será si un string o un numero
 
 
 		do{
