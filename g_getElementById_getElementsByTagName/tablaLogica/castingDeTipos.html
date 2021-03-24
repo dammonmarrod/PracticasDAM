@@ -3,11 +3,8 @@
     <head>
         <title>Tabla lógica</title>
        <script type="text/javascript">
-        yLogico(){
-               ma=document.getElementById("a").textContent;
-               mb=document.getElementById("b").textContent;
-              document.getElementById("c").textContent=parseInt(ma)&&parseInt(mb);
-        }
+        yLogico();
+        oLogico();
          
          
         function yLogico(){
@@ -25,7 +22,7 @@
             //Sacamos ls valores de las celdas
             var a=celdas[i].textContent;
             var b=celdas[i+1].textContent;
-            celdas[i+2].textContent=parseInt(ma)&&parseInt(mb)
+            celdas[i+2].textContent=parseInt(ma)||parseInt(mb)
           }
         }
         funcion negacion(){
