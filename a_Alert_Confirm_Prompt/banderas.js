@@ -3,7 +3,7 @@ consiste en el do-while poner una variable que me haga funcionar el bucle hasta 
 */
 
 
-salida=1;
+salida=1;//equivale a salida=true;
 var datos= new Array();
 var cont=0;
 var suma=0;
@@ -24,8 +24,8 @@ do{
     }
   }else{//Cuando no mete datos
     if(dato==null){//si da a cancelar
-      if(cont !=0){//si el contador es diferente de 0
-        salida=0;//Así consigo que salga del bucle cuando doy a cancelar y cuando el contador valga más de 1
+      if(cont !=0){//si el contador es diferente de 0 
+        salida=0;//Así consigo que salga del bucle cuando doy a cancelar y cuando el contador valga más de 1 //equivale a salida=false;
       }else{
         alert("debes introducir al menos un dato númerico");
       }
@@ -34,7 +34,7 @@ do{
     }
   
   }
-}while(salida==1); //Mientras salida sea igual a 1
+}while(salida==1); //Mientras salida sea igual a 1 //equivale a while(salida);
 
  console.log(datos);
  for(var i=0; i<datos.length; i++){
