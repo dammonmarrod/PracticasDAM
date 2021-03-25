@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Supermercado</title>
+	<style type="text/css">
+		table,tr,td, caption{
+			border: 2px solid black;
+			text-align: center;
+		}
+
+
+
+	</style>
+	<script type="text/javascript">
+
+		window.onload = function()
+		{
+			descargaArchivo();	
+		}
+
+		function descargaArchivo()
+		{
+			// Obtener la instancia del objeto XMLHttpRequest
+			if(window.XMLHttpRequest)
+			{
+				peticion_http = new XMLHttpRequest();
+			}
+			else if(window.ActiveXObject)
+			{
+				peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			// Preparar la funcion de respuesta
+			peticion_http.onreadystatechange = muestraContenido;
+			// Realizar peticion HTTP
+			peticion_http.open('GET', 'JsonSupermercado.json', true);
+			peticion_http.send(null);
+
+			function muestraContenido()
+			{
+				if(peticion_http.readyState == 4)
+				{
+					if(peticion_http.status == 200)
+					{
+						var respuesta_json = peticion_http.responseText;
+						var objeto_json = eval("("+respuesta_json+")");
+
+						var supermercados = objeto_json.supermercado;
+
+						var nombre = supermercados.nombre;
+						var direccion = supermercados.direccion
+						var geoposicion = supermercados.geoposicion;
+
+						crearTabla(supermercados);
+						
+					}
+
+				}
+
+				function crearTabla(misSupermercados)
+				{
+					for (var i = 0; i < misSupermercados.length; i++) 
+					{
+						tabla = document.createElement("table");
+						body = document.getElementsByTagName("body");
+						body[0].appendChild(tabla);
+						tabla.style.margin =  "auto";
+
+						titulo = document.createElement("caption");
+						contenido = document.createTextNode("Supermercado");
+						titulo.appendChild(contenido);
+
+						tabla.appendChild(titulo);
+
+						tr = document.createElement("tr");
+						tabla.appendChild(tr);
+
+						td = document.createElement("td");
+						contenido= document.createTextNode("Nombre");
+						td.appendChild(contenido);
+						tr.appendChild(td);
+
+						td = document.createElement("td");
+						contenido= document.createTextNode(misSupermercados[i].nombre);
+						td.appendChild(contenido);
+						tr.appendChild(td);
+
+						tr = document.createElement("tr");
+						tabla.appendChild(tr);
+
+						td = document.createElement("td");
+						contenido= document.createTextNode("Direccion");
+						td.appendChild(contenido);
+						tr.appendChild(td);
+
+						td = document.createElement("td");
+						contenido= document.createTextNode(misSupermercados[i].direccion);
+						td.appendChild(contenido);
+						tr.appendChild(td);
+
+						tr = document.createElement("tr");
+						tabla.appendChild(tr);
+
+						td = document.createElement("td");
+						contenido= document.createTextNode("Geoposicion");
+						td.appendChild(contenido);
+						tr.appendChild(td);
+
+						td = document.createElement("td");
+						contenido= document.createTextNode(misSupermercados[i].geoposicion);
+						td.appendChild(contenido);
+						tr.appendChild(td);
+
+						ofertas = misSupermercados[i].ofertas;
+
+						for (var j = 0; j < ofertas.length; j++)
+						{
+							tr = document.createElement("tr");
+							tabla.appendChild(tr);
+
+							td = document.createElement("td");
+							contenido= document.createTextNode("Oferta " + (j + 1));
+							td.appendChild(contenido);
+							tr.appendChild(td);
+
+							td = document.createElement("td");
+							contenido= document.createTextNode("Nombre: " + ofertas[j].producto + ", Oferta: " + ofertas[j].oferta + ", Vigencia: " + ofertas[j].vigencia + ", Nota: " + ofertas[j].nota);
+							td.appendChild(contenido);
+							tr.appendChild(td);
+						}
+
+						productos = misSupermercados[i].productos;
+
+						for (var j = 0; j < productos.length; j++)
+						{
+							tr = document.createElement("tr");
+							tabla.appendChild(tr);
+
+							td = document.createElement("td");
+							contenido= document.createTextNode("Producto " + (j + 1));
+							td.appendChild(contenido);
+							tr.appendChild(td);
+
+							if(productos[j].adquirido == true)
+							{
+								productos[j].adquirido = "SI";
+							}
+							else
+							{
+								productos[j].adquirido = "NO";
+							}
+
+							td = document.createElement("td");
+							contenido= document.createTextNode("Nombre: " + productos[j].nombre + ", Precio: " + productos[j].precio + ", Unidades: " + productos[j].unidades + ", Adquirido: " + productos[j].adquirido);
+							td.appendChild(contenido);
+							tr.appendChild(td);
+						}
+
+						br = document.createElement("br");
+						body[0].appendChild(br);
+					}
+
+				}
+			}
+		}
+
+		
+		
+	</script>
+</head>
+<body>
+<!--
+<TABLE>
+	<THEAD>HOLA</THEAD>	
+</TABLE>
+-->
+</body>
+</html>

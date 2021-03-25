@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<supermercados>
+	<supermercado>
+		<nombre>Lidl</nombre>
+		<direccion>Av. de la Institución Libre de Enseñanza, 23C, 28037 Madrid</direccion>
+		<geoposicion>40.439243328338364, -3.633533500924182</geoposicion>
+		<ofertas>
+			<oferta>
+				<producto>Leche</producto>
+				<oferta>0.5</oferta>
+				<vigencia>24-05-2021</vigencia>
+				<nota></nota>
+			</oferta>
+
+			<oferta>
+				<producto>Galletas</producto>
+				<oferta>2 x 1</oferta>
+				<vigencia> 24-06-2021</vigencia>
+				<nota></nota>
+			</oferta>
+
+			<oferta>
+				<producto>Magdalenas</producto>
+				<oferta>3 x 2</oferta>
+				<vigencia>31-03-2021</vigencia>
+				<nota></nota>
+			</oferta>
+		</ofertas>
+		<productos>
+			<producto>
+				<nombre>Naranjas</nombre>
+				<precio>2</precio>
+				<unidades>10</unidades>
+				<adquirido>true</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Brocoli</nombre>
+				<precio>1</precio>
+				<unidades>100gr</unidades>
+				<adquirido>false</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Pan</nombre>
+				<precio>1.75</precio>
+				<unidades>3</unidades>
+				<adquirido>true</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Lentejas</nombre>
+				<precio>1</precio>
+				<unidades>4</unidades>
+				<adquirido>false</adquirido>
+			</producto>
+		</productos>
+	</supermercado>
+
+	<supermercado>
+		<nombre>Mercadona</nombre>
+		<direccion>C. de Julián Camarillo, 15, 28037 Madrid</direccion>
+		<geoposicion>40.43454528922788, -3.631572009059317</geoposicion>
+		<ofertas>
+			<oferta>
+				<producto>Espinacas</producto>
+				<oferta>Regalo Lechuga</oferta>
+				<vigencia>01-04-2021</vigencia>
+				<nota></nota>
+			</oferta>
+
+			<oferta>
+				<producto>Fresas</producto>
+				<oferta>2 Kilos 2€</oferta>
+				<vigencia>25-04-2021</vigencia>
+				<nota></nota>
+			</oferta>
+
+			<oferta>
+				<producto>Fregona</producto>
+				<oferta>2 x 1</oferta>
+				<vigencia>20-04-2021</vigencia>
+				<nota></nota>
+			</oferta>
+		</ofertas>
+		<productos>
+			<producto>
+				<nombre>Café</nombre>
+				<precio>5.40</precio>
+				<unidades>1</unidades>
+				<adquirido>true</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Pizza</nombre>
+				<precio>1.99</precio>
+				<unidades>2</unidades>
+				<adquirido>false</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Berenjenas</nombre>
+				<precio>2</precio>
+				<unidades>1 Kilo</unidades>
+				<adquirido>true</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Servilletas</nombre>
+				<precio>1</precio>
+				<unidades>500</unidades>
+				<adquirido>true</adquirido>
+			</producto>
+		</productos>
+	</supermercado>
+	<supermercado>
+		<nombre>Ahorramas</nombre>
+		<direccion>Plaza de Vilaflor, s/n, 28017 Madrid</direccion>
+		<geoposicion>40.43327874991308, -3.6360848741069463</geoposicion>
+		<ofertas>
+			<oferta>
+				<producto>Espinacas</producto>
+				<oferta>Regalo Lechuga</oferta>
+				<vigencia>01-04-2021</vigencia>
+				<nota></nota>
+			</oferta>
+
+			<oferta>
+				<producto>Fresas</producto>
+				<oferta>2 Kilos 2€</oferta>
+				<vigencia>25-04-2021</vigencia>
+				<nota></nota>
+			</oferta>
+
+			<oferta>
+				<producto>Fregona</producto>
+				<oferta>2 x 1</oferta>
+				<vigencia>20-04-2021</vigencia>
+				<nota></nota>
+			</oferta>
+		</ofertas>
+		<productos>
+			<producto>
+				<nombre>Café</nombre>
+				<precio>5.40</precio>
+				<unidades>1</unidades>
+				<adquirido>true</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Pizza</nombre>
+				<precio>1.99</precio>
+				<unidades>2</unidades>
+				<adquirido>false</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Berenjenas</nombre>
+				<precio>2</precio>
+				<unidades>1 Kilo</unidades>
+				<adquirido>true</adquirido>
+			</producto>
+
+			<producto>
+				<nombre>Servilletas</nombre>
+				<precio>1</precio>
+				<unidades>500</unidades>
+				<adquirido>true</adquirido>
+			</producto>
+		</productos>
+	</supermercado>
+</supermercados>
