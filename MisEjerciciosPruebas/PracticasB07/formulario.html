@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formularios</title>
+	<script type="text/javascript" src="borrarJs.js"></script>
+</head>
+<body>
+	<div class="container" id="container">
+		<h2>PRACTICA DE FORMULARIO</h2>
+		<form class="form1" id="form1">
+			<fieldset>
+				<legend>Datos Personales</legend>
+					<label for="name">Name: </label>
+					<input type="text" id="textName" placeholder="Enter your name">
+					<br>
+					<label for="year">Years: </label>
+					<input type="text" id="textyears" placeholder="Enter your years">
+			</fieldset>
+
+			<fieldset>
+				<legend >Tipo de Coche: </legend>
+						<label for="car">Berlina </label>
+						<input type="radio" value="Berlina" name="car">
+						<br>
+						<label for="car">Monovolumen </label>
+						<input type="radio" value="Monovolumen" name="car">
+						<br>
+						<label for="car">SUV </label>
+						<input type="radio" value="SUV" name="car">
+						<br>
+			</fieldset>
+
+			<fieldset>
+				<legend>Opciones: </legend>
+						<label for="options">Climatizador </label>
+						<input type="radio" value="Climatizador" name="options">
+						<br>
+						<label for="options">GPS </label>
+						<input type="radio" value="GPS" name="options">
+						<br>
+
+						<p>Existen unas listas asociadas a los formularios que son las listas desplegables.</p>
+						<select>
+							<option value="0">===========</option>
+							<option value="1">Rojo</option>
+							<option value="2">Amarillo</option>
+							<option value="2">Azul</option>
+					</select>
+			</fieldset>
+			<fieldset>
+					<legend>Comentarios</legend>
+					<p>Otro elemento es el TEXTAREA. Es una caja de texto grande para comentarios.</p>
+					<p>Tiene los atributos cols y rows para definir su tamaño cuantas filas rows y cuantas columnas cols.</p>
+					<textarea cols="30" rows="10" id="textarea"></textarea>
+			</fieldset>
+
+		</form>
+
+	</div>
+	<p>Además hay botones con funcionalidades propias:</p>
+	<input type="button" value="Confirmar" id="confirmar">
+
+	<div id="botonSubmit">
+		<div id="eleccion"></div>
+		<input type="submit" value="Enviar">
+	</div>
+	
+
+</body>
+</html>
+
