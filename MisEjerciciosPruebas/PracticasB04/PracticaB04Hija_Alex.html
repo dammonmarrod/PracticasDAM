@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ventana Hija</title>
+	<style type="text/css">
+		table, tr,td
+		{
+			border: 2px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+		var citas = ["qdd con los colegas", "quedada con las amigas", "dormir la siesta"];
+		window.onload = function()
+		{
+			//Solucion 1
+			//Asignamos a los enlaces el metodo onclick Mensaje
+			enl1 = document.getElementsByTagName("a");
+			
+			//for(i in enl1)
+			//for(i of enl1)
+			for (var i = 0; i < enl1.length; i++)
+			{
+				//enl1[i].onclick = mensaje;
+				//i.onclick = mensaje;
+				
+				enl1[i].onclick = mensaje;
+				enl1[i].setAttribute("pp", i);
+			}
+			//console.log(i);
+
+			//Solucion 2
+			//Vamos yendo una a uno a los ID asignandoles la funcion Mensaje
+			/*document.getElementById("uno").onclick = mensaje;
+			document.getElementById("dos").onclick = mensaje;
+			document.getElementById("tres").onclick = mensaje;*/
+		}
+
+		
+		//function mensaje(mieven)
+		function mensaje()
+		{
+		
+			a = window.opener.document.getElementById("p1");
+			a.innerHTML = "cita del dia " + this.textContent + " es " + citas[this.getAttribute("pp")];
+										//mieven.target.textContent
+		}
+	</script>
+
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<td><a href="#" id="uno">1</a></td>
+			<td><a href="#" id="dos">2</a></td>
+			<td><a href="#" id="tres">3</a></td>
+		</tr>
+	</table>
+</body>
+</html>
