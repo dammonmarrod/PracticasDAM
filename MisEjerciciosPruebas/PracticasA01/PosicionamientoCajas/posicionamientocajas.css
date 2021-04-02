@@ -1,0 +1,94 @@
+#cajagrande{
+	top:10px;
+	left:20px;
+	/*Cuando pongo left y top por si mismo definen la izquierda, pero le tendré que decir la propiedad position que le indicará donde se debe colocar */
+	/* si no se pone la propiedad position será un posicionamiento estático, que será 0.0*/
+	width:500px;
+	height:500px;
+	background:  orange;
+}
+
+#cajamediana{
+	top:20px;
+	left:30px;
+	width:300px;
+	height:300px;
+	background: green;
+	position: absolute;
+
+}
+
+#cajapequeña{
+	top:50px;
+	left:100px;
+	width:100px;
+	height:100px;
+	background: blue;
+	position: absolute;
+
+}
+
+
+/* top, left y position son elementos necesarios en las cajas  para definir su estructura*/
+
+
+/* 
+1.- Todas las cajas sin posicionamiento. No se observa nada.
+2.1- La caja C con pos. Absoluto: se coloca en la posición más arriba, porque toma en cuenta la posición del navegador. Cuando le pongo el posicionamiento determinado se pone con respecto a las coordenadas de su ancestro que tenga roto el posicionamiento (como la cajamedia no tiene posiion no lo tiene roto, por lo que no le vale como origen de coordenadas, la cajagrande no tiene posicionamiento y no lo toma como origen de coordenadas, por lo que usa el body como origen de coordenadas.)
+2.2.- La caja C con pos. Relativo: cuando le pongo el posicionamiento relative se pone con respecto a las coordenadas de la caja superior lo que diga su top y su left
+3.1.1.- C absoluto y B absoluto: a la cajamediana no le afecta el posicionamiento de su hija cajapequeña, pero si el de su padre, por lo que esta con respecto al body.
+la caja verde se desplaza del punto de coordenadas de la cajagrande que es la que no ha roto su posicionamiento.
+Con el posicionamiento absoluto no parte siempre del body 
+3.1.2.- C relativo y B absoluto: la caja b rompe su posicionamiento y la caja c adquiere la posición de la caja 2
+La cajamediana es absolute toma el posicionamiento del body 0.0
+La cajapequeña es relativa, se desplaza con respecto a donde iba aparecer, debajo del párrafo2, es decir se mueve junto con la cajamedia, pero se desplaza donde iba a salir.
+3.1.3.- C absoluto y B relativo: 
+la cajamediana es relativo: mantiene su posicionamiento porque mantiene su posición con respecto a su origen y el parrfafo 1
+la cajapequeña es absoluta: mira al ancestro que tenga roto su posicionamiento y el b tiene relativo como lo tiene roto es su punto de coordenadas
+
+3.1.4.- C relativo y B relativo: mantienen sus propiedades
+b relativo: se desplaza desde donde tenia que salir, debajo del parrafo1.
+c relativo. se desplaza desde donde tenía que salir. debajo del parrafo2
+
+4.1.1.- C absoluto y A absoluto: la caba a y c rompen su posición y la b mantiene sus propiedades
+Caja A absoluta: su origen de ocoordenadas es el bodt porque solo tiene como padre al body;
+CajaB estatico
+CajaC absoluta: su origen de coordenadas es el naranza porque es el ancestro que tiene roto el posicionamiento;
+
+
+4.1.2.- C relativo y A absoluto: la caja a rompe su posicionamiento y la caja c mantiene su posicionamietno
+Caja A absoluta
+Caja B 
+Caja C relativa: su origen es el ancestro que no tiene roto el posicionamiento la cajaB;
+
+
+4.1.3.- C absoluto y A relativo: la caja c rompe su posición y la caja a se mantiene en su posición
+
+Caja A relativo: se pone respecto a su origen el body que toma el posicionamiento desde donde debe empezar;
+
+Caja C absoluta: su origen es el punto de naranja, porque se desplaza con respecto al ancestro que tiene roto el desplazamiento.
+
+4.1.4.- C relativo y A relativo: ambas mantienen su posicionamiento.
+Todos relativos: respecto a sus posiciones originales;
+
+5.- Las distintas combinaciones con posicionamiento para las tres cajas (8posibilidades)
+Todas tienen posiciones: Hay 8 posibilidades 
+En 4 la CAJAC es relativa apareceiendo debajo del parrafo 2, por lo que nos interesa cuando la cajaC es absoluta(donde tendremos que buscar el padre que tiene roto el ancestro -se posicionará donde comienza la cajaB /No el parrafo-)
+
+Caja A     Caja C absoluta   Caja B relavite
+Caja A     Caja C absoluta   Caja B absluto
+Caja A
+Caja A
+La caja A le da lo mismo lo de sus hijos, así que no le importa si es relativo y absoluto.
+
+position: relative: se desplaza con respeto a su origen de coordenadas dado por la caja ancestral. Si tiene un párrafo, será debajo donde tendrá su punto de coordenadas. Se desplazará respecto a su origen de coordenadas.
+Los relativos aparecen siempre donde deberían aparecer.
+position: absolute: la caja mira todos sus ancestros hasta llegar al body, y si ninguno tiene el posicionamiento roto o el posicinamiento coje el body;
+
+
+CONCLUSIONES
+Todas las cajas sin posicionamiento o con posicionamiento static ignorarán los valores de top, left, right, bottom y se situarán dependiendo de si es un elemento en bloque o en línea.
+Las cajas con position relative se mueven respecto de su posición original los valores indicados por top, left, right, top y bottom. Puede pisar otros elementos. Además, el lugar donde estaban no es rellenado por el resto de elementos.
+Las cajas con position absolute toman como eje de coordenadas el siguiente contenedor que las contiene de dentro hacia afuera con position distinta de static. Si no hay ninguno, entonces el body será su eje de coordenadas. Los elementos rellenan el hueco que éstos dejan al desplazarse. También pueden pisar otros elementos.
+Todo elemento contenido en una caja con position absolute o relative se verá afectado por este movimiento (siempre que tenga position static, position absolute o position relative). 
+*/
