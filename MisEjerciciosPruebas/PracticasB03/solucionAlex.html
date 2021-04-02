@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PracticaB03</title>
+	<style type="text/css">
+	 p#nombresOrdenar
+	 {
+	 	color: blue;
+	 }
+	</style>
+	<script type="text/javascript">
+		var nombre = "";
+		nombres = "";
+		arrayNombres = "";
+		
+		
+		window.onload = function()
+		{
+			f1();
+		}
+
+		
+		function f1()
+		{
+			nombre = prompt("Introduce un nombre", "");
+
+			while(nombre != null)
+			{
+				nombres += nombre + " ";
+				nombre = prompt("Introduce un nombre", "");
+			}
+
+			arrayNombres = nombres.split(" ");
+
+			pSinOrdenar = document.getElementById("nombresSinOrdenar");
+			pSinOrdenar.innerHTML = "Los nombres introducidos son: " + arrayNombres;
+
+			arrayNombres.sort();
+
+			pOrdenar = document.getElementById("nombresOrdenar");
+			pOrdenar.innerHTML = "Los nombres ordenados son: " + arrayNombres;
+		}
+	</script>
+</head>
+<body>
+	<p id="nombresSinOrdenar"></p>
+	<p id="nombresOrdenar"></p>
+</body>
+</html>
