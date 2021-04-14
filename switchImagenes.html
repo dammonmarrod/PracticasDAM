@@ -16,7 +16,10 @@
 
 		function cambiar(){
 			//alert(this.src);//la imagen sobre la que actuo
-			switch (this.src){//la condicion
+			fin=this.src.length;
+			inicio= fin-nºcaracteres;
+			//substring sirve para cortar cadenas
+			switch (this.src.substring()){//la condicion sería this.src
 				case "imagen4.jpg":
 					this.src="imagen1.jpg"
 				break;
@@ -26,7 +29,6 @@
 				case "imagen6.jpg":
 					this.src="imagen3.jpg"
 				break;
-
 			}
 		}
 	</script>
