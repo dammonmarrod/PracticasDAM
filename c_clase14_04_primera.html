@@ -4,16 +4,17 @@
 	<meta charset="utf-8">
 	<title>Imagenes Cambiando</title>
 	<script type="text/javascript">
-		//Trabajar con objetos
-		var imagen1on=new Imagen();//objeto del tipo imagen
-		imagen1on.src="imagen1.jpg"
+		window.onload=function(){
+			//Precarga de imagenes
 
-		document.getElementById("imagen1").src=imagen1on.src;
+			//Trabajar con objetos
+			var k=new Imagen();//objeto del tipo imagen
+			k.src="imagen1.jpg"
 
-		
-
-
-
+			document.getElementById("il").onmouseover=function(){
+				document.getElementById("il").src=k.src;
+			} ;
+		}//fin window.onload
 	</script>
 </head>
 <body>
