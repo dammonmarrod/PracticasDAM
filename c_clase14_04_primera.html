@@ -1,0 +1,34 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Imagenes Cambiando</title>
+	<script type="text/javascript">
+		//Trabajar con objetos
+		var imagen1on=new Imagen();//objeto del tipo imagen
+		imagen1on.src="imagen1.jpg"
+
+		document.getElementById("imagen1").src=imagen1on.src;
+
+		
+
+
+
+	</script>
+</head>
+<body>
+	<table>
+		<tr id="superior">
+			<td><img id="imagen1" width="200" height="200"></td>
+			<td><img src="imagen2.jpg" width="200" height="200"></td>
+			<td><img src="imagen3.jpg" width="200" height="200"></td>
+				
+		</tr>
+		<tr id="inferior">
+			<td><img src="imagen4.jpg" width="200" height="200"></td>
+			<td><img src="imagen5.jpg" width="200" height="200"></td>
+			<td><img src="imagen6.jpg" width="200" height="200"></td>	
+		</tr>
+	</table>
+</body>
+</html>
