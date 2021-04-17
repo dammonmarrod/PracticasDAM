@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tablas dinámicas</title>
+	<script type="text/javascript" src="tablaDinamicaBasicaJs.js"></script>
+</head>
+<body>
+	<!--Creamos la tabla -->
+	<table>
+		<!--Definimos el encabezamiento de la columna -->
+		<thead>
+			<!--Definimos las filas -->
+			<tr>
+				<!--Definimos las celdas de los encabezamientos para cada programa -->
+				<th id="nombre">Nombre Programa</th>
+				<th id="descripcion">Descripcion</th>
+				<th id="link">Link al ivoox</th>
+				<th id="twitter">Twitter</th>
+				<th id="email">Email</th>
+			</tr>
+		</thead>
+		<!--Definimos el cuerpo de la tabla donde se incluiran los datos desde JavaScript -->
+		<tbody id="cuerpoTabla"></tbody>
+		
+	</table>
+	
+	<!-- Boton para generar los datos-->
+	<input type="button" value="Generar datos" id="botonGenerarDatos">
+	<input type="button" value="Ordenar Por Descripcion" id="botonOrdenarDescripcion">
+	
+	
+
+</body>
+</html>
