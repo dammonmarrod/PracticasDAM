@@ -1,0 +1,41 @@
+{
+  "listadoCiudades": {
+    "provincias": [
+      {
+        "nombre": "Galicia",
+        "provincia": [
+          "A Coruña",
+          "Lugo",
+          "Pontevedra", 
+          "Ourense"
+        ]
+      },
+      {
+        "nombre": "Asturias",
+        "ciudadImportante": [
+          "Asturias"
+        ]
+      },
+      {
+        "nombre": "Cantabria",
+        "provincia": [
+          "Cantabria"
+        ]
+      },
+      {
+        "nombre": "Castilla y Leon",
+        "provincia": [
+          "Leon",
+          "Palencia",
+          "Burgos",
+          "Soria", 
+          "Segovia", 
+          "Valladolid",
+          "Avila", 
+          "Salamanca",
+          "Zamora"
+        ]
+      }
+    ]
+  }
+}
